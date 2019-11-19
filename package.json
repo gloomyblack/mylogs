@@ -1,0 +1,13 @@
+{
+  "name": "mylogs",
+  "version": "1.0.0",
+  "description": "just my logs",
+  "main": "index.js",
+  "repository": "https://github.com/gloomyblack/mylogs.git",
+  "author": "gloomyblack",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "vuepress": "^1.2.0"
+  }
+}
