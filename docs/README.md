@@ -1,4 +1,4 @@
----
+<!-- ---
 home: true
 heroImage: /hero.png
 heroText: Hero 标题
@@ -15,4 +15,4 @@ features:
 - title: 回雪
   details:
 footer: MIT Licensed | Copyright © 2019 Lucian
----
+--- -->
