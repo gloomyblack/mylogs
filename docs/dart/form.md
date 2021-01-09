@@ -1,0 +1,5 @@
+# Form
+
+用于将多个表单字段小部件（例如TextField小部件）组合在一起的可选容器。
+
+每个单独的表单字段都应包装在FormField小部件中，并且Form小部件应作为所有这些的共同祖先。 在FormState上调用方法以保存，重置或验证作为此Form的后代的每个FormField。 要获取FormState，您可以将Form.of与祖先是Form的上下文一起使用，或者将GlobalKey传递给Form构造函数并调用GlobalKey.currentState。
