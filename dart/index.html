@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dart | Gloomy Black&#39;s logs</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="Just My Logs">
+    
+    <link rel="preload" href="/mylogs/assets/css/0.styles.61f17e56.css" as="style"><link rel="preload" href="/mylogs/assets/js/app.c3b13ee2.js" as="script"><link rel="preload" href="/mylogs/assets/js/2.246b1edd.js" as="script"><link rel="preload" href="/mylogs/assets/js/8.4b7102b7.js" as="script"><link rel="prefetch" href="/mylogs/assets/js/10.7dc29179.js"><link rel="prefetch" href="/mylogs/assets/js/11.1efec8f4.js"><link rel="prefetch" href="/mylogs/assets/js/12.837052bc.js"><link rel="prefetch" href="/mylogs/assets/js/3.1cc01215.js"><link rel="prefetch" href="/mylogs/assets/js/4.865692a8.js"><link rel="prefetch" href="/mylogs/assets/js/5.81254301.js"><link rel="prefetch" href="/mylogs/assets/js/6.6e8c67be.js"><link rel="prefetch" href="/mylogs/assets/js/7.56672612.js"><link rel="prefetch" href="/mylogs/assets/js/9.cce22402.js">
+    <link rel="stylesheet" href="/mylogs/assets/css/0.styles.61f17e56.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mylogs/" class="home-link router-link-active"><!----> <span class="site-name">Gloomy Black's logs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/mylogs/dart/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  dart
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/mylogs/dart/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  dart
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/mylogs/dart/" aria-current="page" class="sidebar-heading clickable router-link-exact-active router-link-active open active"><span>Dart</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/mylogs/dart/" aria-current="page" class="active sidebar-link">Dart</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mylogs/dart/#基本事实和概念" class="sidebar-link">基本事实和概念</a></li><li class="sidebar-sub-header"><a href="/mylogs/dart/#变量" class="sidebar-link">变量</a></li><li class="sidebar-sub-header"><a href="/mylogs/dart/#类" class="sidebar-link">类</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="dart"><a href="#dart" class="header-anchor">#</a> Dart</h1> <h2 id="基本事实和概念"><a href="#基本事实和概念" class="header-anchor">#</a> 基本事实和概念</h2> <ul><li>凡是保存在变量中的皆为对象，都是某个类的实例，无论是数字、函数还是null都是对象，所有的对象都继承了<code>Object</code>类；</li> <li>Dart是强类型语言，但是也可以推断类型，若要明确说明不需要任何类型需要使用<code>dynamic</code>；</li> <li>Dart支持泛型；</li> <li>Dart支持顶级函数（例如main())，支持函数内创建函数；</li> <li>Dart支持顶级变量；</li> <li>Dart没有可见性关键字，以下划线（_)开头表示相对于库来说是私有的；</li></ul> <h2 id="变量"><a href="#变量" class="header-anchor">#</a> 变量</h2> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Bob'</span>
+daynamic name <span class="token operator">=</span> <span class="token string">'Bob'</span>
+String name <span class="token operator">=</span> <span class="token string">'Bob'</span>
+</code></pre></div><h3 id="默认值"><a href="#默认值" class="header-anchor">#</a> 默认值</h3> <p>未初始化的变量默认为null，因为一切皆为对象，因此数字类型也不例外。</p> <h3 id="final和const"><a href="#final和const" class="header-anchor">#</a> final和const</h3> <div class="custom-block tip"><p class="custom-block-title">static、final和const的区别</p> <ol><li><p>const有以下几种使用场景</p> <ul><li><p>const用在等号左边，其作用是声明变量并且要求<strong>必须在声明变量时赋值，一旦赋值就不允许修改，而声明值必须是编译时常数</strong>，const在声明变量的时候可以省略变量的类型，至于编译时常数有以下几种情况：</p> <ul><li>数字、字符串和其他const变量</li> <li>表达式，且其值在编译时是可知的</li> <li>集合或对象，集合必须用const修饰，对象的构造函数必须用const修饰</li></ul> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token string">'hello'</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> c <span class="token operator">=</span> a<span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> aa <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> bb <span class="token operator">=</span> aa <span class="token operator">&gt;</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token number">2</span> <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> aaa <span class="token operator">=</span> <span class="token keyword">const</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> bbb <span class="token operator">=</span> <span class="token function">ConstObject</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">ConstObject</span> <span class="token punctuation">{</span>
+  <span class="token keyword">final</span> value<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token function">ConstObject</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span>；
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>const用在等号右边，一般用作修饰集合，要求集合的元素必须是递归的编译时常数，不允许对集合内容做任何改变。</p> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token comment">// 错误，集合的元素必须是编译时常量</span>
+  <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">const</span> <span class="token punctuation">[</span>c<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token keyword">const</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token comment">// 错误，集合内容不允许修改</span>
+  b<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>const修饰构造函数，要求类的所有成员变量必须由final修饰。</p> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token keyword">class</span> <span class="token class-name">ConstObject</span> <span class="token punctuation">{</span>
+  <span class="token keyword">final</span> value<span class="token punctuation">;</span>
+  <span class="token comment">// 错误，必须是final变量</span>
+  int value2<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token function">ConstObject</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  log <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ul></li></ol></div> <h2 id="类"><a href="#类" class="header-anchor">#</a> 类</h2> <h3 id="工厂构造函数"><a href="#工厂构造函数" class="header-anchor">#</a> 工厂构造函数</h3> <div class="language-dart extra-class"><pre class="language-dart"><code><span class="token keyword">class</span> <span class="token class-name">Logger</span> <span class="token punctuation">{</span>
+  <span class="token keyword">final</span> String name<span class="token punctuation">;</span>
+  bool mute <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">static</span> <span class="token keyword">final</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Logger<span class="token operator">&gt;</span> _cache <span class="token operator">=</span> <span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Logger<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">factory</span> <span class="token function">Logger</span><span class="token punctuation">(</span>String name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>_cache<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> _cache<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">final</span> logger <span class="token operator">=</span> Logger<span class="token punctuation">.</span><span class="token function">_internal</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      _cache<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> logger<span class="token punctuation">;</span>
+      <span class="token keyword">return</span> logger<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  Logger<span class="token punctuation">.</span>_internal <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">void</span> log <span class="token punctuation">(</span>String msg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>mute<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">print</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/mylogs/assets/js/app.c3b13ee2.js" defer></script><script src="/mylogs/assets/js/2.246b1edd.js" defer></script><script src="/mylogs/assets/js/8.4b7102b7.js" defer></script>
+  </body>
+</html>
